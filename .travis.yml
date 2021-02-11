@@ -18,9 +18,9 @@ script:
   - cp travis_local_settings.py local_settings.py
   - if [[ $TRAVIS_BRANCH == "master" ]]; then python manage.py test --keepdb; fi;
 deploy:
-provider: heroku
-app: egc-1819-1730-juaferfer11
-strategy: git
-api_key: $HEROKU_AUTH_TOKEN
-on:
-branch: master
+  provider: heroku
+  app: egc-1819-1730-juaferfer11
+  strategy: git
+  api_key: $HEROKU_AUTH_TOKEN
+  on:
+    branch: master
